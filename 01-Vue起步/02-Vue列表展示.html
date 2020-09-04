@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo02</title>
+</head>
+<body>
+
+<div id="app">
+    {{movies}}
+    <ul>
+<!--        使用v-for去遍历数组-->
+        <li v-for="movie in movies">{{movie}}</li>
+    </ul>
+</div>
+
+
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:'#app',
+        data:{
+            message:'hi',
+            movies:['霸王别姬','泰坦尼克号','当幸福来敲门']
+        }
+    })
+</script>
+</body>
+</html>

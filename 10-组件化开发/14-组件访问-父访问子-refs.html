@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+  <cpn></cpn>
+  <cpn></cpn>
+  <cpn ref="aaa"></cpn>
+  <button @click="btnClick">222</button>
+</div>
+
+
+<template id="cpn">
+  <div>
+    <p>children</p>
+    <p>{{name}}</p>
+<!--    <button @click="showMessage"></button>-->
+  </div>
+</template>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+
+
+    },
+    methods:{
+      btnClick(){
+        // console.log(this.$children);
+        // //父组件直接调用子组件中的方法
+        // //下表为0起始为索引,上面组件数组中有三个组件，所以索引值为0，1，2
+        // this.$children[0].showMessage()
+        // console.log(this.$children[0].name);
+
+        //通过refs去取子组件的属性，是最常用，上面的是需要拿所有组件才会用。
+        console.log(this.$refs.aaa.name);
+      }
+
+
+    },
+    computed:{
+
+    },
+    watch:{
+
+    },
+    components:{
+      cpn:{
+        template:`#cpn`,
+        data(){
+          return{
+            name:'子组件的name'
+          }
+        },
+        methods: {
+          showMessage(){
+            console.log("showMessage")
+
+          }
+        }
+      },
+
+
+
+    }
+  })
+
+</script>
+</body>
+</html>

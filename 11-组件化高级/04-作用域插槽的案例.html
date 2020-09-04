@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+  <cpn></cpn>
+</div>
+
+<template id="cpn">
+  <div>
+    <slot>
+      <ul>
+        <li v-for="item in pLanguage">{{item}}</li>
+      </ul>
+    </slot>
+
+  </div>
+</template>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+
+
+    },
+    methods:{
+
+    },
+    computed:{
+
+    },
+    watch:{
+
+    },
+    components:{
+      cpn:{
+        template:`#cpn`,
+        data(){
+          return{
+            pLanguage:['c++','python','java','javascript','c','go','c#']
+          }
+        }
+      }
+
+    }
+  })
+
+</script>
+</body>
+</html>

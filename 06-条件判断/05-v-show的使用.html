@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--v-show用来决定标签是否显示的问题-->
+<div id="app">
+<!--  存在dom中，但是display为none-->
+  <h2 v-show=isShow>{{name}}</h2>
+<!--  直接不存在dom中-->
+  <h2 v-if=isShow>{{name}}</h2>
+
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      isShow:true
+    
+    },
+    methods:{
+    
+    },
+    computed:{
+    
+    },
+    watch:{
+    
+    }
+  })
+  
+</script>
+</body>
+</html>

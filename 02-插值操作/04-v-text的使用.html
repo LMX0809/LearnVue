@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+  <h2>{{name}}hhhhhhh</h2>
+  <h2 v-text="name"></h2>
+<!--  hhhhh是显示不出来的-->
+  <h2 v-text="name">hhhhh</h2>
+
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx'
+    
+    },
+    methods:{
+    
+    },
+    computed:{
+    
+    },
+    watch:{
+    
+    }
+  })
+  
+</script>
+</body>
+</html>

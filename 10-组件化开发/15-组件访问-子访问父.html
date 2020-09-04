@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+  <cpn></cpn>
+
+</div>
+
+<template id="cpn">
+  <ccpn></ccpn>
+</template>
+
+<template id="ccpn">
+  <div>
+    <p>cchildren</p>
+    <button @click="btnClick">访问父</button>
+  </div>
+</template>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+    },
+    methods:{
+
+    },
+    computed:{
+
+    },
+    watch:{
+
+    },
+    components:{
+      cpn:{
+        template:`#cpn`,
+        data(){
+          return{
+            name:'第二级组件'
+          }
+        },
+
+        components: {
+          ccpn:{
+            template: `#ccpn`,
+            methods: {
+              btnClick(){
+                //1.访问父组件的内容
+                console.log(this.$parent.name);
+                console.log(this.$parent.$parent.name);   //会出现紧耦合，所以用的少
+                console.log(this.$root.name);   //会出现紧耦合，所以用的少
+
+
+
+              },
+            }
+          }
+
+        },
+
+
+      },
+
+
+
+    }
+  })
+
+</script>
+</body>
+</html>

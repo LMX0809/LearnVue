@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+<!--  事件调用方法没有参数-->
+  <button @click="btn1f1">1</button>
+  <button @click="btn1f1()">1()</button>
+  
+<!--  在事件定义时，写函数时省略了小括号，凡是方法本身是需要一个参数的-->
+<!--  "-----btn2" -->
+<!--  省略了小括号，这个时候，vue会默认将浏览器生产的event事件对象作为参数传入到方法-->
+  <button @click="btn1f2">2</button>
+<!--  123 "-----btn2"-->
+  <button @click="btn1f2(123)">2(123)</button>
+<!--  undefined "-----btn2"-->
+  <button @click="btn1f2()">2()</button>
+  <!--  方法定义时，我们需要event对象，同时又需要其他参数-->
+  <button @click="btn3Click">3</button>
+  <button @click="btn3Click()">3()</button>
+<!--  在调用方式，光是写event可能是指代方法也可能是变量，所以固定写法获取浏览器参数的event对象：$event-->
+  <button @click="btn3Click(123, $event)">3(123,$event)</button>
+
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx'
+    
+    },
+    methods:{
+      btn1f1(){
+        console.log("btn1")
+      },
+      btn1f2(abc){
+        console.log(abc,"-----btn2")
+      },
+      btn3Click(abc, event){
+        console.log('++++', abc, event)
+      }
+    
+    },
+    computed:{
+    
+    },
+    watch:{
+    
+    }
+  })
+  
+</script>
+</body>
+</html>

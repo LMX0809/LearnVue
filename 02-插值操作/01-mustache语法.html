@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+<h2>{{name}} age is {{age}}</h2>
+  <br>
+<!--  可以连接字符串变量为表达式-->
+<h2>{{name +' ' + hobby}}</h2>
+  
+  <h2>{{age * 2}}</h2>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      age:24,
+      hobby:'ppp'
+    
+    },
+    methods:{
+    
+    },
+    computed:{
+    
+    },
+    watch:{
+    
+    }
+  })
+  
+</script>
+</body>
+</html>

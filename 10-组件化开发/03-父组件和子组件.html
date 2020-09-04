@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+
+  <cpn2></cpn2>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  //第一个组件构造器
+  const cpnC1 = Vue.extend({
+    template: `
+      <div>
+        <h2>title1</h2>
+        <p>ddddddddddd1</p>
+      </div>
+    `
+  })
+  //第二个组件构造器
+  const cpnC2 = Vue.extend({
+    template: `
+      <div>
+        <h2>title2</h2>
+        <p>deeeeeeeeeeeeee</p>
+        <cpn1></cpn1>
+      </div>
+    `,
+    components:{
+      //放在c2中注册，c2注册时候就会把c1也给注册了.cpn2是父组件，cpn1是子组件
+      cpn1: cpnC1
+    }
+  })
+  //root组件
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+
+
+    },
+    methods:{
+
+    },
+    computed:{
+
+    },
+    watch:{
+
+    },
+    components:{
+      // cpn1: cpnC1,
+      cpn2: cpnC2
+    }
+  })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--因为data是函数类型，但是每次都是return一个新的对象。所以三个组件中的变量都是不共用的，就是为了复用不共享-->
+  <cpn></cpn>
+  <cpn></cpn>
+  <cpn></cpn>
+</div>
+
+<template id="cpn">
+<!--  template中一定要跟上一个div的组件，不然只渲染第一个-->
+  <div>
+    <h2>当前计数：{{counter}}</h2>
+    <button @click="increment">+</button>
+    <button @click="decrement">-</button>
+    <div>组件</div>
+  </div>
+</template>
+<script src="../js/vue.js"></script>
+<script>
+  Vue.component('cpn',{
+    template: `#cpn`,
+    data(){
+        return{
+          counter:0
+        }
+    },
+    methods: {
+      increment(){
+        this.counter++
+      },
+      decrement(){
+        this.counter--
+      }
+    }
+  })
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+
+
+    },
+    methods:{
+
+    },
+    computed:{
+
+    },
+    watch:{
+
+    },
+    components:{
+
+
+    }
+  })
+
+</script>
+</body>
+</html>

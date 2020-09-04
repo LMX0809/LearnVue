@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--  <h2 :style="{key(属性名):value(属性值)}">{{name}}</h2>-->
+  <h2 :style="{fontSize:'50px'}">{{name}}</h2>
+  <h2 :style="{fontSize:ftSize}">{{name}}</h2>
+  <h2 :style="{fontSize:ftSizeNum + 'px'}">{{name}}</h2>
+  <h2 :style="getStyle()">{{name}}</h2>
+
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      ftSize: '100px',
+      ftSizeNum: 100
+    
+    },
+    methods:{
+      getStyle:function (){
+        return {fontSize:this.ftSize}
+      }
+    },
+    computed:{
+    
+    },
+    watch:{
+    
+    }
+  })
+  
+</script>
+</body>
+</html>

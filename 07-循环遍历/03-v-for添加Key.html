@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+  <ul>
+    <li v-for="item in movies">{{item}}</li>
+  </ul>
+
+  <br>
+  <ul>
+    <li v-for="item in movies" :key="item">{{item}}</li>
+  </ul>
+
+  <br>
+  <button @click="btnClick"></button>
+
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      /**
+       *对数组进行操作的时候，可以用push方法，等一系列方法进行修改
+       * .splice(2,2)从第二个（下标从0开始）删除2个元素
+       *
+       * .splice(2,0,'fff') 在第二个元素后面插入fff，在没有key的情况下，增加的过程就是类似数组的中间增加，后面的数据都需要向后移动，
+       * 
+       * 所以大数组的的插入效率就会变得慢
+       * 如果加上key就类似链表的增加,增删就会快,key具有不重复性，如果有重复就会有报错
+       * pop()删除尾部
+       * shift()删除第一个元素
+       * unshift()在数组最前面添加一个元素，可以多个参数，push也可以多个参数，自动补全中有...items表示为可变参数
+       * splice() 删除元素，插入元素，替换元素。splice(startIndex,endIndex,...values)
+       * 删除元素：第二个参数表示要从起始位删除几个元素
+       * 替换元素：第二个参数表示要替换元素的个数，...values表示要增加的数据
+       * sort()排序功能
+       * reverse()反转功能，就是倒序功能
+       *
+       * *****通过索引修改数据不是相应式的*******
+       * this.movies[0] = '3e3'
+       * 遇到替换需求就用splice()
+       *
+       * 如果就是就想用索引进行修改，就要使用Vue对象
+       * Vue.set(this.movies, indexNum, value)
+       *
+       *
+       */
+
+      movies:['1','3','44','t5t']
+
+    },
+    methods:{
+      btnClick() {
+        this.movies.push("222")
+        //按住ctrl+鼠标左击可以查看函数
+        this.movies.sort()
+      }
+
+    },
+    computed:{
+
+    },
+    watch:{
+
+    }
+  })
+
+</script>
+</body>
+</html>

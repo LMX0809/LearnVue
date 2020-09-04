@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--  作业需求：点击列表中的哪一项，那么该项的文字变成红色-->
+  <h2>{{name}}</h2>
+  <ul>
+    <li @click="activeRed" :class="{active:isActive}" v-for="(item,index) in movies">{{index}}--{{item}}</li>
+  </ul>
+
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      movies:['霸王别姬','七龙珠','火影忍者'],
+      isActive:false
+    
+    },
+    methods:{
+      activeRed:function (){
+        this.isActive = true
+      }
+    
+    },
+    computed:{
+    
+    },
+    watch:{
+    
+    }
+  })
+  
+</script>
+</body>
+</html>

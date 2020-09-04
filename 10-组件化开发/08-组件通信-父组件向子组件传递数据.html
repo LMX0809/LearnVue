@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+<!--  要用v-bind进行绑定-->
+  <cpn v-bind:cmovies="movies" :cname="name"></cpn>
+</div>
+
+
+<template id="cpn">
+  <div>
+    <p>{{cname}}</p>
+    <p>{{cmovies}}</p>
+    <ul>
+      <li v-for="item in cmovies">{{item}}</li>
+    </ul>
+  </div>
+</template>
+
+
+
+<script src="../js/vue.js"></script>
+<script>
+  //父传子，通过props
+  const cpn = {
+    template: `#cpn`,
+    //原始写法，不带类型验证和默认数据
+    // props:['cmovies','cname'],
+    //带有类型验证
+    // props:{
+    //   cmovies:Array,
+    //   cname:String
+    // },
+    props:{
+      cmovies:{
+        type:Array,
+        default(){       //2.5.17版本之后要用工厂函数去返回数组的值
+          return['null']
+        }  //如果没有这个属性，就用没有电影填充这个属性
+      },
+      cname:{
+        required:true  //表示这个属性是必须要传递的，不然就会报错。强制要求传递重要属性
+
+
+      }
+    },
+    data(){
+      return{
+
+      }
+    }
+  }
+
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      movies: ['m1','m2','m3','m4','m5']
+
+
+
+    },
+    methods:{
+
+    },
+    computed:{
+
+    },
+    watch:{
+
+    },
+    components:{
+      cpn
+
+    }
+
+
+
+  })
+
+</script>
+</body>
+</html>

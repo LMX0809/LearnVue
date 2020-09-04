@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--这个div交给Vue进行管理-->
+<!--Vue是响应式的编程-->
+    <div id="app">
+    {{message}}
+    {{student}}
+    </div>
+
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:'#app', //用于挂载要管理的元素
+        data:{ //定义数据，这里的数据可以直接定义，也可以是从服务器网络请求得来
+            message:'hi',
+            student:'lmx'
+
+        }
+    })
+</script>
+</body>
+</html>

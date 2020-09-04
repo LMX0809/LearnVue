@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+  <span v-if="loginType == true">
+    <input type="text" key="ddd">用户名登陆
+  </span>
+  <span v-else>
+    <input type="text" key="rere">邮箱登录
+  </span>
+  <button @click="changeLogin">切换登录</button>
+</div>
+
+<!--使用key在解决Vue的虚拟DOM重载复用问题-->
+<span>
+  <label for="username">用户账号</label>
+  <input type="text" id="username" placeholder="用户账号" key="dd">
+</span>
+
+<span>
+  <label for="email">用户邮箱</label>
+  <input type="text" id="email" placeholder="邮箱登录" key="ff">
+</span>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      loginType:true
+    
+    },
+    methods:{
+      changeLogin(){
+        this.loginType = !this.loginType
+      }
+      
+    
+    },
+    computed:{
+    
+    },
+    watch:{
+    
+    }
+  })
+  
+</script>
+</body>
+</html>

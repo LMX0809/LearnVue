@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+  <cpn><button>slot:ddddd</button></cpn>
+  <cpn><h2>slot h2</h2></cpn>
+<!--  cpn标签内的多个标签会使用template中默认的一个slot，多对一。-->
+  <cpn><h2>slot:h222</h2> <h1>slot:h1</h1></cpn>
+</div>
+<template id="cpn">
+  <div>
+    <h2>我组件</h2>
+<!--    预留一个插槽 保留共性，不同的就留插槽。如果cpn中没有重写，那就是使用默认的slot-->
+    <slot><button>默认slot</button></slot>
+  </div>
+</template>
+
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+
+
+    },
+    methods:{
+
+    },
+    computed:{
+
+    },
+    watch:{
+
+    },
+    components:{
+      cpn:{
+        template:`#cpn`
+      }
+
+
+    }
+  })
+
+</script>
+</body>
+</html>

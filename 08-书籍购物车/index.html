@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <table>
+    <thead>
+      <tr>
+        <th>书籍id</th>
+        <th>书籍名称</th>
+        <th>出版日期</th>
+        <th>价格</th>
+        <th>购买数量</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr v-for="(book,index) in books">
+<!--        这个写法不好个性化操作-->
+<!--        <td v-for="item in book">{{item}}</td>-->
+        <td>{{book.id}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.date}}</td>
+<!--        <td>{{'￥'+book.price.toFixed(2)}}</td>-->
+        <td>{{book.price | showPrice}}</td>
+        <td>
+          <button @click="subOne(index,book.count)">-</button>
+          {{book.count}}
+          <button @click="addOne(index,book.count)">+</button>
+        </td>
+
+        <td><button @click="btnRemove(index)">remove</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+  <div>总价格：{{totalPrice | showPrice}}</div>
+</div>
+<script src="../js/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

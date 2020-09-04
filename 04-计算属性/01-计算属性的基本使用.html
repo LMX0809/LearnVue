@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+<!--  计算属性可以不用加小括号 -->
+  <h2>{{fullName}}</h2>
+
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      firstName:'lebron',
+      lastName:'james'
+      
+    
+    },
+    methods:{
+    
+    },
+    computed:{
+      fullName:function (){
+        return this.firstName+' '+this.lastName
+      }
+    },
+    watch:{
+    
+    }
+  })
+  
+</script>
+</body>
+</html>

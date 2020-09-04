@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+  <ul>
+<!--    遍历出value-->
+    <li v-for="item in info">{{item}}</li>
+  </ul>
+  
+  <ul>
+<!--    key---value     -->
+    <li v-for="(item,key) in info">{{key}}--{{item}}</li>
+  </ul>
+  
+  <ul>
+    <li v-for="(value,key,index) in info">{{value}}---{{key}}---{{index}}</li>
+  </ul>
+  
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      info:{
+        name:'lmx',
+        age:25,
+        height:171
+      }
+    
+    },
+    methods:{
+    
+    },
+    computed:{
+    
+    },
+    watch:{
+    
+    }
+  })
+  
+</script>
+</body>
+</html>

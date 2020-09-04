@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+<!--  html中的驼峰标识处理，用-符号-->
+  <cpn :c-info="info"></cpn>
+</div>
+
+<template id="cpn">
+  <div>
+    <p>{{cInfo}}</p>
+  </div>
+
+
+
+
+
+</template>
+
+
+<script src="../js/vue.js"></script>
+<script>
+  const cpn = {
+    template:`#cpn`,
+    props:{
+      cInfo:{
+        type:Object,
+        default() {
+          return {};
+        }
+      }
+    }
+  }
+
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      info:{
+        name:'lmx',
+        age:25,
+        sex:'male'
+      }
+
+
+    },
+    methods:{
+
+    },
+    computed:{
+
+    },
+    watch:{
+
+    },
+    components:{
+      cpn
+
+
+    }
+  })
+
+</script>
+</body>
+</html>

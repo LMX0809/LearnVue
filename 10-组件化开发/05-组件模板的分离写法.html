@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+  <cpn></cpn>
+  <cpn></cpn>
+  <cpn></cpn>
+  <cpn></cpn>
+  <cpn2></cpn2>
+</div>
+
+<!--
+--抽离写法主要是为了提高效率，能够使用上自动补全等效果
+--
+--
+-->
+<!--第一种抽离写法,使用id来进行联系-->
+<script type="text/x-template" id="cpn">
+  <div>
+    <h1>{{title}}</h1>
+    <h2>1111</h2>
+    <p>2ssssss</p>
+  </div>
+</script>
+
+<!--第二种写法-->
+<template id="cpn2">
+  <div>
+
+    <h2>2222</h2>
+    <p>DDDDDD</p>
+  </div>
+
+</template>
+
+
+<script src="../js/vue.js"></script>
+<script>
+  //组件不可以直接访问Vue中data中的数据,组件内的mustache语法中的变量要声明在组件中
+  Vue.component('cpn',{
+    template: `#cpn`,
+    data(){    //此data属性必须是函数
+      return{
+        title:'bccc'
+
+      }
+  }
+  })
+
+  Vue.component('cpn2',{
+    template: `#cpn2`
+  })
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+
+
+    },
+    methods:{
+
+    },
+    computed:{
+
+    },
+    watch:{
+
+    },
+    components:{
+
+
+
+    }
+  })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b630499-424f-4383-aa3e-887f0878ddb6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fqsHsIZ52yoJNF3J3qeA1BhMFs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/10-组件化开发" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\李梦笑\Documents\我的坚果云\学习\Vue_Project\lesson01\10-组件化开发" />
+      <recent name="C:\Users\lmx_r\Documents\我的坚果云\学习\Vue_Project\lesson01\js" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.01-slot-插槽的基本使用.html">
+    <configuration name="01-slot-插槽的基本使用.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/lesson01/11-组件化高级/01-slot-插槽的基本使用.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="05-作业的回顾和完成.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/lesson01/07-循环遍历/05-作业的回顾和完成.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="10-组件通信-子传父.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/lesson01/10-组件化开发/10-组件通信-子传父.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="15-组件访问-子访问父.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/lesson01/10-组件化开发/15-组件访问-子访问父.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/lesson01/08-书籍购物车/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.01-slot-插槽的基本使用.html" />
+        <item itemvalue="JavaScript Debug.15-组件访问-子访问父.html" />
+        <item itemvalue="JavaScript Debug.10-组件通信-子传父.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.05-作业的回顾和完成.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b630499-424f-4383-aa3e-887f0878ddb6" name="Default Changelist" comment="" />
+      <created>1596956872949</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596956872949</updated>
+      <workItem from="1596956874028" duration="9173000" />
+      <workItem from="1597143499238" duration="19284000" />
+      <workItem from="1597360446895" duration="4718000" />
+      <workItem from="1597384455945" duration="6547000" />
+      <workItem from="1597448806318" duration="6592000" />
+      <workItem from="1597754647055" duration="5000" />
+      <workItem from="1597756044254" duration="65000" />
+      <workItem from="1597757749328" duration="421000" />
+      <workItem from="1597807543918" duration="974000" />
+      <workItem from="1597827474086" duration="2257000" />
+      <workItem from="1598069695676" duration="1526000" />
+      <workItem from="1598071260979" duration="7103000" />
+      <workItem from="1598141547383" duration="14979000" />
+      <workItem from="1598190220118" duration="2663000" />
+      <workItem from="1598239081329" duration="29996000" />
+      <workItem from="1598483445560" duration="1793000" />
+      <workItem from="1598503267385" duration="1234000" />
+      <workItem from="1598586540285" duration="690000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="753" y="28" width="853" height="994" key="#HTML" timestamp="1598071349168">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="753" y="28" width="853" height="994" key="#HTML/0.0.1920.1050@0.0.1920.1050" timestamp="1598071349168" />
+    <state width="1899" height="382" key="GridCell.Tab.0.bottom" timestamp="1598450350528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350528" />
+    <state width="1899" height="382" key="GridCell.Tab.0.center" timestamp="1598450350528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350528" />
+    <state width="1899" height="382" key="GridCell.Tab.0.left" timestamp="1598450350528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350528" />
+    <state width="1899" height="382" key="GridCell.Tab.0.right" timestamp="1598450350528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350528" />
+    <state width="1899" height="382" key="GridCell.Tab.1.bottom" timestamp="1598450350528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350528" />
+    <state width="1899" height="382" key="GridCell.Tab.1.center" timestamp="1598450350528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350528" />
+    <state width="1899" height="382" key="GridCell.Tab.1.left" timestamp="1598450350528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350528" />
+    <state width="1899" height="382" key="GridCell.Tab.1.right" timestamp="1598450350528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350528" />
+    <state width="1899" height="382" key="GridCell.Tab.2.bottom" timestamp="1598450350528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350528" />
+    <state width="1899" height="382" key="GridCell.Tab.2.center" timestamp="1598450350528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350528" />
+    <state width="1899" height="382" key="GridCell.Tab.2.left" timestamp="1598450350528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350528" />
+    <state width="1899" height="382" key="GridCell.Tab.2.right" timestamp="1598450350528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350528" />
+    <state width="1899" height="382" key="GridCell.Tab.3.bottom" timestamp="1598450350529">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.3.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350529" />
+    <state width="1899" height="382" key="GridCell.Tab.3.center" timestamp="1598450350529">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.3.center/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350529" />
+    <state width="1899" height="382" key="GridCell.Tab.3.left" timestamp="1598450350528">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.3.left/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350528" />
+    <state width="1899" height="382" key="GridCell.Tab.3.right" timestamp="1598450350529">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1899" height="382" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1598450350529" />
+    <state x="922" y="298" key="SettingsEditor" timestamp="1598240521988">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="922" y="298" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1598240521988" />
+    <state x="1289" y="320" width="672" height="678" key="search.everywhere.popup" timestamp="1598358178447">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1289" y="320" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1598358178447" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/04-计算属性/02-计算属性的复杂操作.html</url>
+          <line>36</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

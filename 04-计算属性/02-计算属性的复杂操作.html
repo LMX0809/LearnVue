@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+  <h2>{{totalMoney}}</h2>
+  <h2>{{totalMoney1}}</h2>
+  <h2>{{totalMoney2}}</h2>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      books:[
+        {id:110,name:'西游',price:99},
+        {id:111,name:'三国',price:199},
+        {id:112,name:'水浒',price:299},
+        {id:113,name:'红楼',price:399}
+        
+      ]
+    
+    },
+    methods:{
+    
+    },
+    computed:{
+      totalMoney:function (){
+        let total = 0 //必须要初始化
+        for (let index = 0; index < this.books.length; index++){
+          total += this.books[index].price
+        }
+        return total
+      },
+      
+      
+      totalMoney1:function (){
+        let total = 0
+        for(let i in this.books){
+          total += this.books[i].price
+        }
+        return total
+      },
+      
+      //es6语法
+      totalMoney2:function (){
+        let total = 0
+        for(let book of this.books){
+          total += book.price
+        }
+        return total
+      },
+    },
+    watch:{
+    
+    }
+  })
+  
+</script>
+</body>
+</html>

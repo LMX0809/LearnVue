@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Titl</title>
+  <style>
+    [v-cloak]{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <h2 v-cloak>{{name}}</h2>
+
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  /**
+  设置1s的延迟，在vue这个对象没有被实例化的时候，是有v-cloak这个属性的
+   但是在vue实例化完成后，vue会去掉cloak这个属性，所以就会显示出来
+   cloak是斗篷的意思，由vue去掉斗篷
+  **/
+  setTimeout(function (){
+    const app = new Vue({
+      el : "#app",
+      data:{
+        name:'lmx'
+      
+      },
+      methods:{
+      
+      },
+      computed:{
+      
+      },
+      watch:{
+      
+      }
+    })
+  },1000)
+  
+  
+</script>
+</body>
+</html>

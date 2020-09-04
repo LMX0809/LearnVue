@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--
+  子组件通过自定义事件传递给父组件
+  子组件中产生事件，希望父组件知道，父组件根据子组件事件产生动作
+
+
+-->
+<!--父组件模板-->
+<div id="app">
+  <h2>{{name}}</h2>
+<!--  监听自定义事件-->
+<!--  这里不需要在写入item参数，因为这个事件不是浏览器产生的event，不存在默认事件，传值会自动传-->
+  <cpn v-on:item-click="cpnClick"></cpn>
+</div>
+
+<!--子组件模板-->
+<template id="cpn">
+  <div>
+    <button v-for="item in categories"
+            @click="btnClick(item)">
+      {{item.name}}
+    </button>
+
+  </div>
+</template>
+
+<script src="../js/vue.js"></script>
+<script>
+
+  const cpn = {
+    template:`#cpn`,
+    data(){
+      return{
+        categories:[
+          {id:'1',name:'phone'},
+          {id:'2',name:'laptop'},
+          {id:'3',name:'computer'}
+        ]
+      }
+    },
+    methods:{
+      btnClick(item){
+        //发射事件，那么父组件就需要接受这个事件
+        this.$emit('item-click',item)
+      }
+    }
+  }
+
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+
+
+    },
+    methods:{
+      cpnClick(item){
+        console.log('ddd',item)
+      }
+
+    },
+    computed:{
+
+    },
+    watch:{
+
+    },
+    components:{
+      cpn
+
+
+    }
+  })
+
+</script>
+</body>
+</html>

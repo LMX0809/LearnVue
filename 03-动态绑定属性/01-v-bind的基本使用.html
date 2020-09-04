@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+<!--  mustache语法是内容语法，不能放在属性中，这是错误的语法-->
+  <img src="{{imgUrl}}" alt="">
+<!--  正确的做法使用v-bind指令-->
+  <img v-bind:src="imgUrl" alt="">
+<!--  语法糖写法-->
+  <a :href="aHref">百度一下</a>
+
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      imgUrl:'https://cn.vuejs.org/images/logo.png',
+      aHref:'http://www.baidu.com'
+    },
+    methods:{
+    
+    },
+    computed:{
+    
+    },
+    watch:{
+    
+    }
+  })
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+  <h2>{{counter}}</h2>
+  <button v-on:click="add">+</button>
+  <button @click="sub">-</button>
+
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      counter: 0
+    
+    },
+    methods:{
+      //此时这个是监听事件，就必须是函数，而不能使用计算属性
+      add:function (){
+        this.counter++
+      },
+      //es6写法
+      sub(){
+        this.counter--
+      }
+  
+    
+    },
+    computed:{
+    
+    
+    },
+    watch:{
+    
+    }
+  })
+  
+</script>
+</body>
+</html>

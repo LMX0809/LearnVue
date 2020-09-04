@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <h2>{{name}}</h2>
+<!--  在这里进行绑定,形成父子之间的通讯-->
+  <cpn :cpnnum1="num1"
+       :cpnnum2="num2"
+       @num1change="num1change"
+       @num2change="num2change">
+
+  </cpn>
+</div>
+
+
+<template id="cpn">
+  <div>
+    <p>props:{{cpnnum1}}</p>
+    <p>data:{{dnumber1}}</p>
+
+<!--    要避免直接改变这个值，会报警告，应该使用父组件去修改子组件的值
+        不能够直接修改props中的属性，而应该使用data或者computed来做绑定
+-->
+
+<!--
+        用data里面的值做一层映射去修改值，不直接动子组件中的props，而修改了data中的数据时候，发射了子组件向父组件发射了修改事件，
+        父组件就处理子组件的事件，父的值发生了修改，进而又由父组件去修改子组件中的props
+-->
+    <input type="text" v-bind:value="dnumber1" @input="num1input">
+
+<!--    <input type="text" v-model="cpnnum1">-->
+<!--    <input type="text" v-model="dnumber1">-->
+
+    <p>props:{{cpnnum2}}</p>
+    <p>data:{{dnumber2}}</p>
+    <input type="text" v-bind:value="dnumber2" @input="num2input">
+<!--    <input type="text" v-model="cpnnum2">-->
+<!--    <input type="text" v-model="dnumber2">-->
+  </div>
+
+</template>
+
+<script src="../js/vue.js"></script>
+<script>
+  const cpn = {
+    template:`#cpn`,
+    data(){
+      return{
+        dnumber1:this.cpnnum1,
+        dnumber2:this.cpnnum2
+
+      }
+    },
+    props:{
+      cpnnum1:Number,
+      cpnnum2:Number
+
+    },
+    methods: {
+      num1input(event){
+        this.dnumber1 = event.target.value
+        this.$emit('num1change',this.dnumber1)
+
+      },
+      num2input(event){
+        this.dnumber2 = event.target.value
+        this.$emit('num2change',this.dnumber2)
+      }
+    }
+
+
+
+  }
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      num1:1,
+      num2:2
+
+
+    },
+    methods:{
+      num1change(value){
+        //初始的value是字符类型
+        this.num1 = parseInt(value)
+      },
+      num2change(value){
+        this.num2 = value
+      }
+
+    },
+    computed:{
+
+    },
+    watch:{
+
+    },
+    components:{
+      cpn
+
+
+    }
+  })
+
+</script>
+</body>
+</html>

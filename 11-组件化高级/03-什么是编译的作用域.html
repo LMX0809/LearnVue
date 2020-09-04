@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+<!--
+    官方准则：父组件模板的所有东西都会在父级作用域内编译，子组件模板的所有东西都会在子级作用域内编译
+
+
+-->
+</head>
+<body>
+<div id="app">
+<!--  Vue实例管理的域是使用Vue实例中的变量-->
+<!--  会使用Vue实例中的isShow,所以用的是true-->
+  <cpn v-show="isShow"></cpn>
+</div>
+
+<template id="cpn">
+<!--  组件有自己的作用域，所以变量使用的是自己作用域中的变量-->
+  <div>
+    <h2>我是子组件</h2>
+    <button v-show="isShow">button</button>
+  </div>
+</template>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el : "#app",
+    data:{
+      name:'lmx',
+      isShow:true
+
+
+    },
+    methods:{
+
+    },
+    computed:{
+
+    },
+    watch:{
+
+    },
+    components:{
+      cpn:{
+        template:`#cpn`,
+        data(){
+          return{
+            isShow:false
+          }
+        }
+      }
+
+
+    }
+  })
+
+</script>
+</body>
+</html>
